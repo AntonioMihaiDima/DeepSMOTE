@@ -265,7 +265,7 @@ comby = np.hstack((resy1,dec_y))
 combx = combx.reshape(combx.shape[0], 3, 224, 224)
 combx = combx.transpose(0,2,3,1)
 combx = combx * 255.
-'''
+
 for i in range(0, 2100):
     image = combx[i].astype('uint8')
 
@@ -291,6 +291,6 @@ for i in range(0, 2100):
         plt.imsave('./DeepSmoteGeneratedImages/Vegetation' + '\\' + str(i) + '.jpg', image)
     
     plt.show()
- '''   
+
 t1 = time.time()
 print('final time(min): {:.2f}'.format((t1 - t0)/60))
